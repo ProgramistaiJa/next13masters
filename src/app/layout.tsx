@@ -12,7 +12,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="pl">
-			<body className={inter.className}>{children}</body>
+			<body className={`${inter.className} p-12`}>
+				{children}
+				<footer className="my-12 text-center text-sm text-gray-500">
+					<p>
+						© {new Date().getFullYear()}{" "}
+						<a href="" className="text-gray-700 hover:underline">
+							eCommerce
+						</a>
+					</p>
+				</footer>
+			</body>
 		</html>
 	);
 }
